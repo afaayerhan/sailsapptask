@@ -1,0 +1,88 @@
+<script>
+  var Orders=[];
+  var Process=[];
+  $(document).ready(function(){
+
+    $("#clickme").click(myGetData);
+    $("#load").click(LoadData);
+    function LoadData(){
+      $.post("api/loadprocessing", function (data, status){
+        $.post("api/loadorders", function(data, status){
+
+        })
+      })
+    }
+
+
+    function myGetData(){
+
+      $.get("api/orders", function(data, status){
+        Orders=data;
+
+        console.log(Orders);
+      }).done(function () {
+        $.get("api/process", function(mydata, status){
+          Process=mydata;
+          console.log(Process);
+        }).done(function  (){
+          for(var i=0; i<Orders.length; i++){
+            var currProcess = 0;
+
+            if(Process[i]){
+              $("table tr:last-child")
+                .after("<tr class="+Orders[i].id+"><td>"+Orders[i].id+"</td> <td>"+Orders[i].customerName+"</td> <td>"+Orders[i].pn +"</td> <td>"+Orders[i].allocated +"</td><td id="+"proc"+Orders[i].id +">"+Process[i].processed+"</td> <td><button id="+Orders[i].id+" class="+"process"+">PROCESS</button></td></tr> ")
+            }
+
+
+
+          }
+          $(".process").click(function () {
+
+            var  that =this;
+            $.post("api/process/"+this.id+"", function (data, status){
+              if(data.message){
+                $("."+that.id+"").hide();
+              }
+              else{
+                //  myGetData();
+                Process[that.id-1].processed++;
+                console.log(that.id);
+                $("#proc"+that.id+"").html(Process[that.id-1].processed);
+              }
+            })
+            //$("."+this.id+"").hide();
+
+            console.log("event process button pressed");
+          })
+        })
+
+      })
+
+    }
+
+
+  });
+</script>
+
+<style>
+  th td{
+    text-align: center;
+  }
+</style>
+<button id="load" >LoadData First</button> <button id="clickme"> And then Click me</button>
+<div id="mydiv">
+
+  <table class="table table-borders"><tr><th>ID</th> <th>CUSTOMERNAME</th> <th>PN</th> <th>ALLOCATED</th> <th>PROCESSED</th><th>ACTION</th> </tr>
+
+  </table>
+</div>
+<!--    <tr><td>ID</td> <td>CUSTOMERNAME</td> <td>PN</td> <td>ALLOCATED</td></tr>
+
+for(var i=0; i<data.length; i++){
+
+          console.log(data[i].id);
+          $("table tr:last-child")
+            .after("<tr><td>"+data[i].id+"</td> <td>"+data[i].customerName+"</td> <td>"+data[i].pn +"</td> <td>"+data[i].allocated +"</td><td>0</td> <td><button>PROCESS</button></td></tr> ")
+        }
+      })
+-->

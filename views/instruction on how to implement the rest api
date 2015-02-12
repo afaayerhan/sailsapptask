@@ -1,0 +1,7 @@
+instruction on how to implement the rest api
+
+
+-- get the orders using /api/orders 
+-- use the id gothen from the orders to check the number of processed orders
+
+-- if someone presses the process button it should triger /api/process/id the id is the orderID this should cause processed to be after ther document has found (find) incremented if the document with that orderId already exits, if it does not exist it should create a new processing document and set the appropreite field 

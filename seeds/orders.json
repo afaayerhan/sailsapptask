@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "customerName": "Samsung",
+        "pn": "13-1372-12",
+        "allocated": 5
+    },
+    {
+        "id": 2,
+        "customerName": "Nokia",
+        "pn": "12-1472-13",
+        "allocated": 51
+    },
+    {
+        "id": 3,
+        "customerName": "Dell",
+        "pn": "15-1322-01",
+        "allocated": 1
+    },
+    {
+        "id": 4,
+        "customerName": "Apple",
+        "pn": "13-6265-42",
+        "allocated": 3
+    },
+    {
+        "id": 5,
+        "customerName": "Apple",
+        "pn": "25-2626-44",
+        "allocated": 6
+    },
+    {
+        "id": 6,
+        "customerName": "Logitech",
+        "pn": "35-2522-54",
+        "allocated": 14
+    },
+    {
+        "id": 7,
+        "customerName": "Microsoft",
+        "pn": "16-7664-66",
+        "allocated": 2
+    },
+    {
+        "id": 8,
+        "customerName": "Philips",
+        "pn": "44-2316-33",
+        "allocated": 3
+    },
+    {
+        "id": 9,
+        "customerName": "Microsoft",
+        "pn": "77-4335-63",
+        "allocated": 5
+    },
+    {
+        "id": 10,
+        "customerName": "Asus",
+        "pn": "13-2563-05",
+        "allocated": 7
+    },
+    {
+        "id": 11,
+        "customerName": "Amazon",
+        "pn": "13-6392-53",
+        "allocated": 1
+    },
+    {
+        "id": 12,
+        "customerName": "Google",
+        "pn": "13-6478-23",
+        "allocated": 33
+    },
+    {
+        "id": 13,
+        "customerName": "HP",
+        "pn": "44-2235-32",
+        "allocated": 1
+    },
+    {
+        "id": 14,
+        "customerName": "Apple",
+        "pn": "24-4333-32",
+        "allocated": 8
+    },
+    {
+        "id": 15,
+        "customerName": "Microsoft",
+        "pn": "21-4334-14",
+        "allocated": 3
+    },
+    {
+        "id": 16,
+        "customerName": "Google",
+        "pn": "34-5555-53",
+        "allocated": 2
+    },
+    {
+        "id": 17,
+        "customerName": "Samsung",
+        "pn": "32-7799-99",
+        "allocated": 14
+    },
+    {
+        "id": 18,
+        "customerName": "Apple",
+        "pn": "25-4332-62",
+        "allocated": 5
+    },
+    {
+        "id": 19,
+        "customerName": "Dell",
+        "pn": "13-6388-12",
+        "allocated": 2
+    },
+    {
+        "id": 20,
+        "customerName": "Samsung",
+        "pn": "13-3800-12",
+        "allocated": 8
+    }
+]
